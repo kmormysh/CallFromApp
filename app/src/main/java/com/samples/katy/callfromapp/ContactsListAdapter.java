@@ -21,7 +21,7 @@ import java.util.Random;
 public class ContactsListAdapter extends BaseAdapter {
 
     private List<Contact> contacts;
-    private List<Contact> originalContacts;
+    public static List<Contact> originalContacts;
     private LayoutInflater layoutInflater;
     private HashMap<Contact, Integer> colorHashMap;
     private Random rnd = new Random();

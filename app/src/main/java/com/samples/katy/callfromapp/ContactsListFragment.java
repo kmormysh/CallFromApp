@@ -17,7 +17,7 @@ import java.util.List;
  * Created by Katy on 3/5/2015.
  */
 public class ContactsListFragment extends Fragment{
-    private DatabaseHandler db;
+    private ContactDatabaseHandler db;
     private ListView listView;
     ContactsListAdapter contactsListAdapter;
 
@@ -25,7 +25,7 @@ public class ContactsListFragment extends Fragment{
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_contactslist, container, false);
 
-        db = new DatabaseHandler(getActivity());
+        db = new ContactDatabaseHandler(getActivity());
 
         if (!db.recordsExist())
             readContactsFromPhone(db);
@@ -43,7 +43,7 @@ public class ContactsListFragment extends Fragment{
         super.onActivityCreated(savedInstanceState);
     }
 
-    private void readContactsFromPhone(DatabaseHandler databaseHandler) {
+    private void readContactsFromPhone(ContactDatabaseHandler databaseHandler) {
 
         List<String> phoneNumbers = new ArrayList<>();
         String name, phoneNumber, image_url;
@@ -75,7 +75,7 @@ public class ContactsListFragment extends Fragment{
         phones.close();
     }
 
-//   private void readContactsFromSIM(DatabaseHandler databaseHandler) {
+//   private void readContactsFromSIM(ContactDatabaseHandler databaseHandler) {
 //        try {
 //            List<String> phoneNumbers = new ArrayList<>();
 //            String simName = null;

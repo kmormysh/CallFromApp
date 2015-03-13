@@ -1,0 +1,61 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.samples.katy.callfromapp.entry">
+
+    <RelativeLayout
+        android:id="@+id/recent_entry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <RelativeLayout
+            android:id="@+id/recent_frame"
+            android:layout_width="20pt"
+            android:layout_height="20pt">
+
+            <ImageView
+                android:id="@+id/recent_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/recent_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="name"
+            android:textSize="15dp"
+            android:layout_margin="5dp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/recent_frame"
+            android:layout_toEndOf="@+id/recent_frame" />
+
+        <TextView
+            android:id="@+id/recent_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="phone"
+            android:textSize="10sp"
+            android:layout_below="@+id/recent_name"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:id="@+id/recent_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="time"
+            android:textSize="10sp"
+            android:layout_alignBaseline="@+id/recent_phone"
+            android:layout_alignBottom="@+id/recent_phone"
+            android:layout_alignLeft="@+id/recent_name"
+            android:layout_alignStart="@+id/recent_name" />
+
+
+    </RelativeLayout>
+
+</FrameLayout>

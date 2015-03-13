@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * Created by Katy on 3/5/2015.
  */
-public class DatabaseHandler extends SQLiteOpenHelper implements IDatabaseHandler {
+public class ContactDatabaseHandler extends SQLiteOpenHelper implements IDatabaseHandler {
 
     private static final int DATABASE_VERSION = 1;
     private static final String DATABASE_NAME = "contactManager";
@@ -23,7 +23,7 @@ public class DatabaseHandler extends SQLiteOpenHelper implements IDatabaseHandle
     private static final String KEY_PH_NO = "phone_number";
     private static final String KEY_IMAGE = "image";
 
-    public DatabaseHandler(Context context) {
+    public ContactDatabaseHandler(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 

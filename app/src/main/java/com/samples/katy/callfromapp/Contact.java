@@ -1,6 +1,7 @@
 package com.samples.katy.callfromapp;
 
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Created by Katy on 3/5/2015.
@@ -61,5 +62,10 @@ public class Contact {
     @Override
     public int hashCode() {
         return ID;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        return (((Contact)o).getID() == this.getID());
     }
 }
